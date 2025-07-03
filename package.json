@@ -1,0 +1,16 @@
+{
+  "name": "angeldecay",
+  "version": "1.0.0",
+  "description": "WhatsApp Account Services",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
