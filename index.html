@@ -678,6 +678,76 @@
             90% { opacity: 1; }
             100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
         }
+        
+        /* Country Flag Previews */
+        .country-preview {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            z-index: 2;
+        }
+        
+        /* Country Search */
+        .country-search {
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .country-search input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            border-radius: 8px;
+            border: 2px solid rgba(106, 17, 203, 0.3);
+            background: rgba(10, 8, 30, 0.7);
+            color: var(--light);
+            font-size: 0.95rem;
+        }
+        
+        .country-search i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+        
+        /* Country List Container */
+        .country-list-container {
+            max-height: 300px;
+            overflow-y: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(106, 17, 203, 0.3);
+            background: rgba(10, 8, 30, 0.9);
+        }
+        
+        .country-option {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .country-option:hover {
+            background: rgba(106, 17, 203, 0.2);
+        }
+        
+        .country-flag-option {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            width: 30px;
+        }
+        
+        .country-name {
+            flex: 1;
+        }
+        
+        .country-code-option {
+            color: var(--gray);
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -687,7 +757,7 @@
     <div class="container">
         <header>
             <h1 class="logo">AngelDecay</h1>
-            <p class="tagline">Professional WhatsApp account management services</p>
+            <p class="tagline">Professional WhatsApp account management services with global coverage</p>
         </header>
         
         <!-- Verification Section -->
@@ -731,9 +801,10 @@
                         <span class="country-flag" id="selectedFlag">🌐</span>
                         <select id="country" required>
                             <option value="">Select your country</option>
+                            <option value="PK" data-flag="🇵🇰" data-code="92">Pakistan</option>
+                            <option value="IN" data-flag="🇮🇳" data-code="91">India</option>
                             <option value="US" data-flag="🇺🇸" data-code="1">United States</option>
                             <option value="GB" data-flag="🇬🇧" data-code="44">United Kingdom</option>
-                            <option value="IN" data-flag="🇮🇳" data-code="91">India</option>
                             <option value="CN" data-flag="🇨🇳" data-code="86">China</option>
                             <option value="ZW" data-flag="🇿🇼" data-code="263">Zimbabwe</option>
                             <option value="ZA" data-flag="🇿🇦" data-code="27">South Africa</option>
@@ -754,6 +825,26 @@
                             <option value="RU" data-flag="🇷🇺" data-code="7">Russia</option>
                             <option value="JP" data-flag="🇯🇵" data-code="81">Japan</option>
                             <option value="KR" data-flag="🇰🇷" data-code="82">South Korea</option>
+                            <option value="BD" data-flag="🇧🇩" data-code="880">Bangladesh</option>
+                            <option value="TR" data-flag="🇹🇷" data-code="90">Turkey</option>
+                            <option value="ID" data-flag="🇮🇩" data-code="62">Indonesia</option>
+                            <option value="MY" data-flag="🇲🇾" data-code="60">Malaysia</option>
+                            <option value="PH" data-flag="🇵🇭" data-code="63">Philippines</option>
+                            <option value="VN" data-flag="🇻🇳" data-code="84">Vietnam</option>
+                            <option value="TH" data-flag="🇹🇭" data-code="66">Thailand</option>
+                            <option value="SG" data-flag="🇸🇬" data-code="65">Singapore</option>
+                            <option value="IL" data-flag="🇮🇱" data-code="972">Israel</option>
+                            <option value="IR" data-flag="🇮🇷" data-code="98">Iran</option>
+                            <option value="IQ" data-flag="🇮🇶" data-code="964">Iraq</option>
+                            <option value="AF" data-flag="🇦🇫" data-code="93">Afghanistan</option>
+                            <option value="LK" data-flag="🇱🇰" data-code="94">Sri Lanka</option>
+                            <option value="NP" data-flag="🇳🇵" data-code="977">Nepal</option>
+                            <option value="BT" data-flag="🇧🇹" data-code="975">Bhutan</option>
+                            <option value="MV" data-flag="🇲🇻" data-code="960">Maldives</option>
+                            <option value="KH" data-flag="🇰🇭" data-code="855">Cambodia</option>
+                            <option value="LA" data-flag="🇱🇦" data-code="856">Laos</option>
+                            <option value="MM" data-flag="🇲🇲" data-code="95">Myanmar</option>
+                            <option value="MN" data-flag="🇲🇳" data-code="976">Mongolia</option>
                         </select>
                     </div>
                 </div>
@@ -817,7 +908,7 @@
         
         <footer>
             <p class="copyright">2025-2030 | AngelDecay</p>
-            <p class="developer">DEVELOPED BY JADEN</p>
+            <p class="developer">DEVELOPED BY JADEN | Global WhatsApp Services</p>
         </footer>
     </div>
 
